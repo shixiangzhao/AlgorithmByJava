@@ -1,19 +1,11 @@
 package shixzh.abj.markallen;
 
 import java.util.Date;
-import java.util.Random;
 
 public class MaxSubSum {
 
     public static void main(String[] args) {
-        int count = 10000;
-        int[] a = new int[count];
-        for (int i = 0; i < count; i++) {
-            Random ran = new Random(i);
-            a[i] = ran.nextInt(100) - 50;
-            System.out.print(a[i] + " ");
-        }
-        System.out.println();
+        int[] a = TestDataUtil.getRandomIntArray(10000);
 
         Date startTime = new Date();
         System.out.println(maxSubSum1(a));
