@@ -1,5 +1,11 @@
 package shixzh.abj.toutiao;
 
+/**
+ * 删除链表中重复的节点
+ * 
+ * @author shixiang.zhao
+ *
+ */
 public class DeleteDuplicateForListArray {
 	// 结点定义，包括当前结点的值和next指向
 	private static class ListNode {

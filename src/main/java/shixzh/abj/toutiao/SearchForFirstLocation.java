@@ -1,7 +1,14 @@
 package shixzh.abj.toutiao;
 
+/**
+ * 二分法查找元素第一次出现的位置
+ * 
+ * @author shixiang.zhao
+ *
+ */
 public class SearchForFirstLocation {
-	public static int getPos(int[] A, int n, int val) {
+	public static int getPos(int[] A, int val) {
+	    int n = A.length;
 		int low = 0, high = n - 1, mid;
 		if (n == 0 || A == null)
 			return -1;
@@ -31,8 +38,7 @@ public class SearchForFirstLocation {
 	public static void main(String[] args) {
 		int A[] = { 4, 4, 5, 5, 5, 6, 5, 6, 7, 9, 6, 12 };
 		int val = 6;
-		int n = A.length;
-		int result = getPos(A, n, val);
+		int result = getPos(A, val);
 		System.out.println(result);
 	}
 }

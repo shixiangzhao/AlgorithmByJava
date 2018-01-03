@@ -2,6 +2,11 @@ package shixzh.abj.toutiao;
 
 import java.util.HashSet;
 
+/**
+ * 求一个字符串中第一个重复的字符
+ * 
+ * @author shixiang.zhao
+ */
 public class FirstDuplineChar {
 	public static char findFirstRepeat(String A, int n) {
 		HashSet<Character> hs = new HashSet<>();
