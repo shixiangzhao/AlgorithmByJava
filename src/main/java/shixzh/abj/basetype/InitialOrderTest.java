@@ -2,6 +2,7 @@ package shixzh.abj.basetype;
 
 /**
  * 静态变量，静态初始化块，变量，初始化块，构造器的执行顺序测试
+ * http://blog.csdn.net/meegomeego/article/details/47295237
  * @author shixiang.zhao
  *
  */
