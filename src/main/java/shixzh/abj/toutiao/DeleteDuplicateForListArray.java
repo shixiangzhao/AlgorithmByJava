@@ -24,8 +24,8 @@ public class DeleteDuplicateForListArray {
 		}
 	}
 
-	// 删除节点的函数
-	public static ListNode delete(ListNode head) {
+	// 删除值相等的节点
+	public static ListNode deleteDuplicateNode(ListNode head) {
 		if (head == null)
 			return null;
 		if (head.next == null)
@@ -41,12 +41,12 @@ public class DeleteDuplicateForListArray {
 				// 若有连续相同的结点，则node要一直++
 				while (node.next != null && node.next.val == node.val)
 					node = node.next;
-				prev.next = node.next;
+				prev.next = node.next; // note的父节点的子节点变为node的子节点
 			} else {
-				prev.next = node;
-				prev = prev.next;
+				prev.next = node; // note的父节点的子节点变为node
+				prev = prev.next; // prev++
 			}
-			node = node.next;
+			node = node.next; // node++
 		}
 		return root.next;
 	}
@@ -78,7 +78,7 @@ public class DeleteDuplicateForListArray {
 		n6.next = n7;
 		n7.next = null;
 		// 调用delete函数，传入n1的值，当成头结点
-		ListNode result = delete(n1);
+		ListNode result = deleteDuplicateNode(n1);
 		print(result);
 
 	}

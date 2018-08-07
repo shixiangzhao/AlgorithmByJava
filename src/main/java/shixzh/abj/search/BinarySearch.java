@@ -4,7 +4,7 @@ public class BinarySearch {
 
     public static void main(String[] args) {
         int[] cap = { 1, 3, 4, 5, 7, 8 };
-        binarySearch(cap, 9);
+        binarySearch(cap, 1);
     }
 
     public static int binarySearch(int[] cap, int tar) {

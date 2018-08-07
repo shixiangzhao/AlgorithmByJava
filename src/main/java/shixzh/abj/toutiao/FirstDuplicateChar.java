@@ -7,7 +7,7 @@ import java.util.HashSet;
  * 
  * @author shixiang.zhao
  */
-public class FirstDuplineChar {
+public class FirstDuplicateChar {
 	public static char findFirstRepeat(String A, int n) {
 		HashSet<Character> hs = new HashSet<>();
 		int length = A.length();
