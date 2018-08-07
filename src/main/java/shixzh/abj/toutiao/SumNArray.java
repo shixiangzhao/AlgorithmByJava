@@ -2,6 +2,10 @@ package shixzh.abj.toutiao;
 
 /**
  * 求1-N之间序列和为N的所有子序列（不包括N本身）
+ * 比如：N=15时，其所有和为15子序列
+ * 1 2 3 4 5
+ * 4 5 6
+ * 7 8
  * 
  * @author shixiang.zhao
  */

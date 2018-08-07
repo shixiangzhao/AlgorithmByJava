@@ -12,21 +12,21 @@ public class SpeakAndCount {
 
     public static void getLastPerson(int n, int m) {
         boolean[] person = new boolean[n]; // 每个人都有两个属性，人员id，人员可否报数。
-        int size = n; // 人数最外层循环
+        int size = n; // 人数, 最外层循环
         int idx = 0; // 人员id，标记第几个人可否报数
         int code = 1; // 报数循环
-        while (size > 0) {
-            if (!person[idx]) { // 只有为false可以报数
-                if (code == m) {
-                    person[idx] = true;
-                    System.out.print(idx + 1 + " ");
-                    code = 0;
-                    size--;
+        while (size > 0) { // 当还有人未出局时，循环报数
+            if (!person[idx]) { // 当标识为false时，可以报数
+                if (code == m) { // 当报数为m时，则出局
+                    person[idx] = true; // 设置出局标识
+                    System.out.print(idx + 1 + " "); // 打印出局人ID
+                    code = 0; // 重新计数
+                    size--; // 一个人出局
                 }
-                code++;
+                code++; // 报数 +1
             }
-            idx++;
-            if (idx == n) {
+            idx++; // 下一个人
+            if (idx == n) { // 最后一个人报完，从第一个人开始
                 idx = 0;
             }
         }
