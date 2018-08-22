@@ -86,7 +86,7 @@ public class MyArrayList<T> implements Iterable<T> {
         return new ArrayListIterator();
     }
 
-    private class ArrayListIterator implements Iterator<T> {
+    class ArrayListIterator implements Iterator<T> {
 
         private int current = 0;
 
